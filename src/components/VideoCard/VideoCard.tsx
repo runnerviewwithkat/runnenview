@@ -6,6 +6,7 @@ import {
   IconThumbUpFilled,
   IconBrandSpotifyFilled,
 } from "@tabler/icons-react";
+import styles from './video.module.scss';
 import React from "react";
 
 interface YouTubeVideoCardProps {
@@ -23,44 +24,23 @@ interface YouTubeVideoCardProps {
 //TODO: рефакторинг
 
 export const VideoCard = ({ commentCount, likeCount, thumbnail, viewCount, youtubeUrl, date, isRecent, spotifyUrl }: YouTubeVideoCardProps) => (
-  <Container style={{
-    width: "100%",
-    borderRadius: "12px",
-    position: "relative",
-    overflow: "visible",
-    padding: 0,
-  }}>
-    <Card
-      shadow="sm"
-      style={{
-        width: "100%",
-        borderRadius: "12px",
-        position: "relative",
-        overflow: "visible",
-      }}>
+  <Container className={styles.container}>
+    <Card shadow="sm" className={styles.card}>
       { isRecent && (
         <Badge
           size="xl"
           variant="gradient"
           gradient={{ from: "#FF0033", to: "#FF0033" }}
           color="#FF0033"
-          style={{ position: "absolute", top: "-0.5rem", left:  "-1rem", transform: 'rotate(-45deg)', zIndex: 3 }}>
+          className={styles.badge}
+        >
           New
         </Badge>
         )}
-      <a style={{ position: "relative" }}  target="_blank" href={youtubeUrl} rel="noreferrer">
-        <Image src={thumbnail} alt="video" radius="md" style={{ marginBottom: "15px" }} />
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            background: "rgba(0, 0, 0, 0.5)",
-            padding: "10px",
-            borderRadius: "50%",
-          }}>
-          <IconPlayerPlay size={20} color="white" />
+      <a className={styles.link}  target="_blank" href={youtubeUrl} rel="noreferrer">
+        <Image src={thumbnail} alt="video" radius="md" className={styles.img} />
+        <div className={styles.playIcon}>
+          <IconPlayerPlay color="white"/>
         </div>
       </a>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "1rem" }}>
