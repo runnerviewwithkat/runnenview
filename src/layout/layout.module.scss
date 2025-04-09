@@ -1,0 +1,29 @@
+.container {
+  max-width: 1080px;
+  min-height: 100vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+.main{
+  margin-left: 110px;
+}
+
+.basket_icon {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1.875rem;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1024px) {
+  .main{
+    margin-left: 0;
+  }
+}

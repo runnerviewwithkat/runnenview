@@ -1,0 +1,31 @@
+@use "../../styles/abstracts" as *;
+
+.backgroundVideoContainer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(94, 92, 127, 0.77);
+}
+
+.backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.mask {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $cl-secondary-opacity;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}

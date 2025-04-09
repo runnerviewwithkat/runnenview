@@ -1,0 +1,60 @@
+@use "../../styles/abstracts" as *;
+
+.detail_notification {
+  position: absolute;
+  padding: 0 1rem 0 4rem;
+  bottom: -3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: $fs-media;
+  align-items: center;
+  color: white;
+  font-weight: $fw-semiBold;
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: $cl-secondary;
+  transition: 0.1s;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.open_notification {
+  bottom: 0;
+}
+
+.detail_notification_img {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+
+.detail_notification_btn {
+  outline: none;
+  border: none;
+  background: none;
+  color: $cl-text;
+  font-weight: $fw-semiBold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.notification {
+  display: flex;
+  width: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $fs-media;
+}
+
+@media screen and (max-width: 530px) {
+  .detail_notification {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .detail_notification {
+    font-size: 0.4rem;
+  }
+}

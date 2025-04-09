@@ -1,0 +1,63 @@
+@use "../../styles/abstracts" as *;
+
+.contacts {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  column-gap: 1.825rem;
+}
+
+.contacts_form_group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+}
+
+.contacts_form_input_wrapper {
+  position: relative;
+  margin-bottom: 1.875rem;
+  height: 3.75rem;
+}
+
+.contacts_title {
+  color: $cl-title;
+}
+
+.contacts_form_input_area {
+  height: 10.25rem;
+}
+
+.contacts_form_input_area textarea {
+  resize: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .contacts {
+    grid-template-columns: 300px 360px;
+    justify-content: center;
+  }
+
+  .contacts_form_group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    grid-template-columns: 310px;
+    row-gap: 1.875rem;
+    padding-bottom: 2rem;
+    margin: 5rem 0 8rem;
+  }
+
+  .contacts_info {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contacts {
+    grid-template-columns: 1fr;
+    margin: 11rem 0 8rem;
+  }
+}

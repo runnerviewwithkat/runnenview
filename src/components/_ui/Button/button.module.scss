@@ -1,0 +1,71 @@
+@use "../../../styles/abstracts" as *;
+
+.primary {
+  position: relative;
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: 1.875rem;
+  box-shadow: 0 0 1px rgb(0 0 0 /0%);
+  border: 1px solid transparent;
+  color: $cl-container;
+  display: inline-block;
+  background-color: $cl-primary;
+  font-weight: $fw-bold;
+  z-index: 11;
+}
+
+.outline {
+  position: relative;
+  background: none;
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: 1.875rem;
+  color: $cl-brown;
+  display: inline-block;
+  border: 1px solid $cl-brown;
+  font-weight: $fw-bold;
+  z-index: 11;
+}
+
+@keyframes button-push {
+  50% {
+    transform:  scale(0.8);
+  }
+  100% {
+    transform:  scale(1);
+  }
+}
+
+.primary:hover {
+  animation: button-push 0.3s linear 1;
+}
+
+.secondary {
+  position: relative;
+  color: white;
+  font-size: $fs-h3;
+  display: inline-block;
+  background-color: $cl-secondary;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  z-index: 3;
+}
+
+.counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  padding: 0.1rem;
+  height: 1rem;
+  min-width: 1rem;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $cl-primary;
+  font-size: 0.6rem;
+}

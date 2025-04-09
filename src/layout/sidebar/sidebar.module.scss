@@ -1,0 +1,86 @@
+@use "../../styles/abstracts" as * ;
+
+.aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: $cl-secondary;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  width: 110px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  transition: .3s;
+}
+
+.logo {
+  width: 4rem;
+}
+
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.nav_link {
+  font-size: $fs-h3;
+  color: $cl-body;
+  font-weight: $fw-bold;
+}
+
+.nav_link:hover {
+  color: $cl-primary;
+}
+
+.nav_link a.active {
+  color: $cl-primary;
+}
+
+.copyright {
+  color: #FFFFFF;
+  font-size: $fs-secondary;
+  transform: rotate(-180deg);
+  writing-mode: vertical-rl;
+}
+
+.nav_toggle {
+  position: fixed;
+  top: 1.25rem;
+  left: 1.875rem;
+  height: 40px;
+  width: 45px;
+  background-color: $cl-secondary;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transition: .3s;
+}
+
+.nav_toggle i {
+  color: $cl-body;
+}
+
+@media screen and (max-width: 1024px) {
+  .aside{
+    left: -110px;
+  }
+
+  .nav_toggle {
+    display: flex;
+  }
+
+  .nav_toggle_open {
+    left: 9rem;
+  }
+
+  .aside_mobile_open {
+    left: 0;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../../../styles/abstracts" as *;
+
+.socials_link {
+  color: $cl-body;
+  font-size: 1.3rem;
+  transition: .3s;
+}
+
+.socials_link:hover {
+  color: $cl-primary;
+}
+
+.socials_link a:active {
+  color: $cl-primary;
+}
+
+@media screen and (max-width: 1024px) {
+  .socials_link{
+    font-size: 1.125rem;
+  }
+}

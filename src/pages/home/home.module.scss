@@ -1,0 +1,40 @@
+@use "../../styles/abstracts" as *;
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home_img {
+  margin-bottom: 1.5rem;
+  width: 250px;
+}
+
+.home_name {
+  font-size: $fs-h1;
+  font-weight: $fw-bold;
+  color: $cl-primary;
+  z-index: 2;
+}
+
+.education {
+  color: $cl-container;
+  width: 100%;
+  z-index: 11;
+}
+
+@media screen and (max-width: 500px) {
+  .home_name {
+    font-size: $fs-h2;
+  }
+}
+
