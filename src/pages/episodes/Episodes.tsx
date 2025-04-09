@@ -5,7 +5,6 @@ import { IEpisodesProps } from "./episodes.props";
 import { PageTitle } from "../../components";
 
 import styles from "./episodes.module.scss";
-import { Skeleton } from "@mantine/core";
 import { VideoCard } from "../../components/VideoCard/VideoCard";
 import { getFormatDate, getIsDateWithinLast3Days } from "../../helpers";
 import { useChannelVideosWithoutShorts } from "./query";
