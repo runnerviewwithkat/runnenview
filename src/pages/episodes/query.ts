@@ -66,7 +66,7 @@ export const useChannelVideosWithoutShorts = ( maxResults = 50) => {
                 const match = duration.match(/PT(?:(\d+)M)?(?:(\d+)S)?/);
                 const minutes = parseInt(match?.[1] || "0", 10);
                 const seconds = parseInt(match?.[2] || "0", 10);
-                return minutes > 2 || (minutes === 2 && seconds > 0); // исключаем Shorts
+                return minutes > 5 || (minutes === 5 && seconds > 0); // исключаем Shorts
             });
 
             return filtered.map((item: any) => ({
